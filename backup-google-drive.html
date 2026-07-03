@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Google Drive 自动备份</title>
+  <link rel="stylesheet" href="/assets/help.css">
+</head>
+<body>
+  <header class="topbar"><strong>C2LY 帮助中心</strong><nav><a href="/">首页</a><a href="/domain-binding">绑定域名</a></nav></header>
+  <main class="shell article">
+    <h1>Google Drive 自动备份</h1>
+    <p>平台可以把每家餐馆自己的数据单独备份到该餐馆指定的 Google Drive。</p>
+
+    <h2>备份内容</h2>
+    <table>
+      <tr><th>内容</th><th>是否备份到客户 Google Drive</th></tr>
+      <tr><td>订单、客户、菜单、设置、积分、发票请求</td><td>是</td></tr>
+      <tr><td>该餐馆 storage 中的运行数据</td><td>是</td></tr>
+      <tr><td>商业版系统源码</td><td>否</td></tr>
+      <tr><td>其他餐馆数据</td><td>否</td></tr>
+    </table>
+
+    <h2>为什么不备份系统源码给客户</h2>
+    <div class="note">系统源码属于平台私有资产。客户备份只用于恢复该客户自己的业务数据，不包含平台代码、密钥、服务器部署配置。</div>
+
+    <h2>建议</h2>
+    <div class="step">1. 客户创建一个专门用于备份的 Google Drive 文件夹。</div>
+    <div class="step">2. 平台配置该租户的备份目标。</div>
+    <div class="step">3. 第一次配置后必须手动执行一次备份确认。</div>
+    <div class="step">4. 之后每天自动备份。</div>
+    <div class="warning">备份不是替代人工检查。上线后应定期做恢复测试，确认备份文件可用。</div>
+  </main>
+</body>
+</html>
+
