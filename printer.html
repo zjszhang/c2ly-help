@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>自动打印机配置</title>
+  <link rel="stylesheet" href="/assets/help.css">
+</head>
+<body>
+  <header class="topbar"><strong>C2LY 帮助中心</strong><nav><a href="/">首页</a><a href="/push-notifications">通知</a></nav></header>
+  <main class="shell article">
+    <h1>自动打印机配置</h1>
+    <p>系统当前主要支持 Star CloudPRNT 自动打印。购买打印机前必须确认型号兼容。</p>
+
+    <h2>推荐型号</h2>
+    <table>
+      <tr><th>品牌</th><th>型号</th><th>建议</th></tr>
+      <tr><td>Star</td><td>mC-Print3 CloudPRNT</td><td>优先推荐，用于厨房订单打印。</td></tr>
+      <tr><td>Star</td><td>TSP100IV / TSP143IV CloudPRNT</td><td>可以使用，购买前确认支持 CloudPRNT。</td></tr>
+    </table>
+
+    <h2>不推荐</h2>
+    <div class="warning">普通 USB 小票机不适合本系统自动打印。网页后台不能直接稳定控制普通 USB 打印机。</div>
+    <div class="warning">只写着“热敏打印机”但不支持 CloudPRNT 的型号，不要购买。</div>
+
+    <h2>后台设置</h2>
+    <div class="step">1. 打开餐馆后台，进入 <strong>Réglages modulaires</strong>。</div>
+    <div class="step">2. 进入 <strong>Commandes</strong>，找到 <strong>Imprimante Star</strong>。</div>
+    <div class="step">3. 设置 <strong>Impression active = Oui</strong>。</div>
+    <div class="step">4. Media type 建议保持 <strong>Auto</strong>。</div>
+    <div class="step">5. 保存设置。</div>
+
+    <h2>打印机配置</h2>
+    <div class="step">1. 打开后台 <strong>Imprimante</strong> 页面。</div>
+    <div class="step">2. 复制后台显示的 Server URL。</div>
+    <div class="step">3. 进入打印机的管理页面，找到 CloudPRNT / Server URL。</div>
+    <div class="step">4. 粘贴 Server URL 并保存。</div>
+    <div class="step">5. 等待 1 到 2 分钟，后台应显示打印机在线。</div>
+    <div class="step">6. 点击测试打印，确认厨房能收到测试票据。</div>
+
+    <h2>排查</h2>
+    <div class="warning">后台没有显示打印机：检查打印机是否联网，CloudPRNT Server URL 是否正确。</div>
+    <div class="warning">有订单但不打印：检查后台打印开关、订单支付状态、打印任务是否失败。</div>
+    <div class="warning">打印乱码或格式不对：Media type 改回 Auto，并重新测试。</div>
+  </main>
+</body>
+</html>
+
