@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>部署帮助中心到 Cloudflare Pages</title>
+  <link rel="stylesheet" href="/assets/help.css">
+</head>
+<body>
+  <header class="topbar"><strong>C2LY 帮助中心</strong><nav><a href="/">首页</a><a href="/domain-binding">绑定域名</a></nav></header>
+  <main class="shell article">
+    <h1>部署帮助中心到 Cloudflare Pages</h1>
+    <p>帮助中心建议放到独立公开仓库，然后用 Cloudflare Pages 自动部署，并绑定 <code>help.c2ly.com</code>。</p>
+
+    <h2>推荐结构</h2>
+    <div class="step">源码私有仓库：只放系统代码，不公开。</div>
+    <div class="step">帮助中心公开仓库：只放教程，不放源码、不放客户资料、不放密钥。</div>
+    <div class="step">Cloudflare Pages：从帮助中心公开仓库自动部署。</div>
+
+    <h2>GitHub 仓库</h2>
+    <div class="step">1. 新建公开仓库，例如 <code>c2ly-help</code>。</div>
+    <div class="step">2. 把 <code>help-site/</code> 目录里的文件上传到仓库根目录。</div>
+    <div class="step">3. 确认仓库根目录有 <code>index.html</code>、<code>_redirects</code>、<code>assets/help.css</code>。</div>
+
+    <h2>Cloudflare Pages 设置</h2>
+    <div class="step">1. 登录 Cloudflare Dashboard。</div>
+    <div class="step">2. 进入 <strong>Workers & Pages</strong>。</div>
+    <div class="step">3. 点击 <strong>Create application</strong>。</div>
+    <div class="step">4. 选择 <strong>Pages</strong>，连接 GitHub 仓库。</div>
+    <div class="step">5. 选择 <code>c2ly-help</code> 仓库。</div>
+    <div class="step">6. Framework preset 选择 <strong>None</strong>。</div>
+    <div class="step">7. Build command 留空。</div>
+    <div class="step">8. Output directory 填 <code>/</code> 或留空，按 Cloudflare 当前界面要求设置。</div>
+    <div class="step">9. 点击 Deploy。</div>
+
+    <h2>绑定 help.c2ly.com</h2>
+    <div class="step">1. 部署成功后，进入 Pages 项目。</div>
+    <div class="step">2. 打开 <strong>Custom domains</strong>。</div>
+    <div class="step">3. 添加 <code>help.c2ly.com</code>。</div>
+    <div class="step">4. 如果 c2ly.com DNS 已托管在 Cloudflare，系统会自动添加 CNAME。</div>
+    <div class="step">5. 等待证书变成 Active。</div>
+
+    <h2>后台链接</h2>
+    <div class="step">系统后台帮助链接默认指向 <code>https://help.c2ly.com/...</code>。</div>
+    <div class="step">如果以后换域名，在后台 Plateforme commerciale 里修改教程 URL 即可。</div>
+
+    <h2>禁止上传</h2>
+    <div class="warning">不要上传系统源码。</div>
+    <div class="warning">不要上传客户数据、数据库备份、订单信息、发票、密钥、服务器配置。</div>
+    <div class="warning">截图里如果出现 token、手机号、客户姓名，必须打码后再放入教程。</div>
+  </main>
+</body>
+</html>
+
