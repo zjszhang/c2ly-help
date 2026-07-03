@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>创建 Telegram Bot</title>
+  <link rel="stylesheet" href="/assets/help.css">
+</head>
+<body>
+  <header class="topbar"><strong>C2LY 帮助中心</strong><nav><a href="/">首页</a><a href="/telegram-login">后台登录</a></nav></header>
+  <main class="shell article">
+    <h1>创建 Telegram Bot</h1>
+    <p>Telegram Bot 用于后台登录授权、订单通知、管理通知。每个平台建议使用一个独立 Bot，不要和私人机器人混用。</p>
+
+    <h2>创建 Bot</h2>
+    <div class="step">1. 打开 Telegram，搜索 <strong>@BotFather</strong>。</div>
+    <div class="step">2. 发送 <code>/newbot</code>。</div>
+    <div class="step">3. 输入 Bot 名称，例如 <code>C2LY Admin</code>。</div>
+    <div class="step">4. 输入 Bot 用户名，必须以 <code>bot</code> 结尾，例如 <code>c2ly_admin_bot</code>。</div>
+    <div class="step">5. BotFather 会返回一段 token，例如 <code>123456:ABC...</code>。这就是后台要填写的 Bot token。</div>
+
+    <h2>安全要求</h2>
+    <div class="warning">Bot token 等同于机器人密码，不能发给客户，不能放到公开 GitHub，不能截图发到群里。</div>
+    <div class="warning">如果 token 泄露，立刻在 BotFather 里使用 <code>/revoke</code> 重新生成。</div>
+
+    <h2>后台配置</h2>
+    <div class="step">1. 打开系统后台 → Réglages modulaires → Sécurité。</div>
+    <div class="step">2. 填写 <strong>Bot token</strong>。</div>
+    <div class="step">3. 填写 <strong>Secret webhook</strong>。建议使用随机字符串，不要用简单密码。</div>
+    <div class="step">4. 保存设置。</div>
+    <div class="step">5. 到 Telegram 管理页面配置管理员和订单通知群。</div>
+
+    <h2>订单群和管理群</h2>
+    <div class="step">建议分两个群：一个订单通知群，一个管理授权群。</div>
+    <div class="step">把 Bot 拉进群后，在后台 Telegram 页面刷新群列表，选择用途。</div>
+    <div class="note">订单群只放厨房/接单人员；管理群只放老板或管理员。</div>
+
+    <h2>常见问题</h2>
+    <div class="warning">搜不到 BotFather：确认搜索的是 <code>@BotFather</code>，不要点广告或相似名字。</div>
+    <div class="warning">后台收不到 Telegram：检查 token 是否完整、Bot 是否被拉进群、管理员是否点击过 Bot 开始按钮。</div>
+    <div class="warning">员工能看到管理通知：说明订单群和管理群没有分开，建议重新设置。</div>
+  </main>
+</body>
+</html>
+
