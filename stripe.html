@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Stripe 在线支付配置</title>
+  <link rel="stylesheet" href="/assets/help.css">
+</head>
+<body>
+  <header class="topbar"><strong>C2LY 帮助中心</strong><nav><a href="/">首页</a><a href="/push-notifications">推送通知</a></nav></header>
+  <main class="shell article">
+    <h1>Stripe 在线支付配置</h1>
+    <p>Stripe 用于客户在线付款。建议先用测试模式确认流程，再切换正式模式。</p>
+
+    <h2>需要准备</h2>
+    <div class="step">1. Stripe 账号。</div>
+    <div class="step">2. Publishable key：以 <code>pk_</code> 开头。</div>
+    <div class="step">3. Secret key：以 <code>sk_</code> 开头。</div>
+    <div class="step">4. Webhook secret：以 <code>whsec_</code> 开头。</div>
+
+    <h2>后台填写</h2>
+    <div class="step">1. 打开后台 → 设置 → Paiement Stripe。</div>
+    <div class="step">2. 测试阶段选择 test，填写测试 key。</div>
+    <div class="step">3. 正式上线选择 live，填写正式 key。</div>
+    <div class="step">4. 保存后下一单测试支付。</div>
+
+    <h2>Webhook</h2>
+    <div class="warning">Webhook 地址必须配置正确，否则客户付款成功后，后台可能不能及时更新支付状态。</div>
+    <div class="note">测试模式和正式模式的 key 不要混用。切换 live 前先确认 Stripe 账号已经完成身份和银行账户验证。</div>
+  </main>
+</body>
+</html>
+
