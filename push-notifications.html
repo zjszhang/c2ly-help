@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>浏览器推送通知</title>
+  <link rel="stylesheet" href="/assets/help.css">
+</head>
+<body>
+  <header class="topbar"><strong>C2LY 帮助中心</strong><nav><a href="/">首页</a><a href="/google-business">Google 商家</a></nav></header>
+  <main class="shell article">
+    <h1>浏览器推送通知</h1>
+    <p>推送通知用于提醒新订单、订单超时、打印失败、支付状态变化等。</p>
+
+    <h2>启用步骤</h2>
+    <div class="step">1. 用需要接收通知的设备打开网站或后台。</div>
+    <div class="step">2. 点击接收通知。</div>
+    <div class="step">3. 浏览器弹出权限时，选择允许。</div>
+    <div class="step">4. 后台 Firebase 推送设置中点击发送测试通知。</div>
+
+    <h2>设备列表</h2>
+    <div class="step">后台会显示已注册设备，例如 Mac Chrome、iPhone Safari、iPad Safari。</div>
+    <div class="step">如果设备不用了，可以在后台删除。</div>
+
+    <h2>常见问题</h2>
+    <div class="warning">iPhone Safari 需要把网站添加到主屏幕后，部分系统版本才支持网页推送。</div>
+    <div class="warning">如果浏览器权限被拒绝，需要到浏览器设置里重新允许通知。</div>
+    <div class="warning">如果后台显示设备但收不到通知，先点“发送测试通知”，再检查 Firebase 配置和 Service Worker。</div>
+  </main>
+</body>
+</html>
+
